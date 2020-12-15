@@ -1,0 +1,10 @@
+<table>
+    {% for beer in RECOMMENDED_SALES
+    if beer != 'total':
+    %}
+    <tr>
+        <td>{{ beer }}</td>
+        <td>{{ RECOMMENDED_SALES[beer] }}</td>
+    </tr>
+    {% endfor %}
+</table>

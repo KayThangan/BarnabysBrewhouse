@@ -1,0 +1,44 @@
+<table>
+    <thead>
+    <th>Select a Period</th>
+    </thead>
+    <form action = "/salesPredictor" method = "POST">
+        <tr  id="salesPredictorForm">
+            <td>
+                <select name="sales_period" style="color: #1e2130;" required>
+                    {% for period in PERIODS %}
+                    {% if PERIOD != period %}
+                    <option  value="{{ period }}">{{ period }}</option>
+                    {% else %}
+                    <option selected="selected" value="{{ period }}" >{{ period }}</option>
+                    {% endif %}
+                    {% endfor %}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Submit" style="color: #1e2130;">
+            </td>
+        </tr>
+    </form>
+</table>
+<br />
+<table>
+    <thead>
+    <th>Beers</th>
+    <th>Quantity</th>
+    </thead>
+    {% for beer in SALES
+    if beer != 'total':
+    %}
+    <tr>
+        <td>{{ beer }}</td>
+        <td>{{ SALES[beer] }}</td>
+    </tr>
+    {% endfor %}
+    <tr>
+        <td>Total</td>
+        <td>{{SALES['total']}}</td>
+    </tr>
+</table>

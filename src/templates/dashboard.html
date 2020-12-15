@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<button class="tablink" onclick="openPage('Sales_Predictions', this, '#1e2130')" id="tab0">Sales Predictions</button>
+<button class="tablink" onclick="openPage('Control_Dashboard', this, '#1e2130')" id="tab1">Control Dashboard</button>
+<button class="tablink" onclick="openPage('Set_Brew_Process', this, '#1e2130')" id="tab2">Set Brew Process</button>
+
+<div id="Sales_Predictions" class="tabcontent">
+    <h3 style="clear: both">Sales Predictor</h3>
+    {% include 'includes/sales_predictions_form.html' %}
+</div>
+
+<div id="Control_Dashboard" class="tabcontent">
+    <h3 style="clear: both;">The Inventory</h3>
+    {% include 'includes/display_inventory.html' %}
+    <br>
+    <h3 style="clear: both">Process Management</h3>
+    {% include 'includes/process_management_form.html' %}
+    <br>
+    <h3 style="clear: both">Current Tank Capacity</h3>
+    {% include 'includes/display_current_tank_capacity.html' %}
+</div>
+
+<div id="Set_Brew_Process" class="tabcontent">
+    <h3 style="clear: both">Recommended Predictions</h3>
+    {% include 'includes/display_recommended_predictions.html' %}
+    <br>
+    <h3 style="clear: both">Add beers for the brew process</h3>
+    {% include 'includes/brew_process_form.html' %}
+</div>
+
+<script>
+    function openPage(pageName,elmnt,color) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+        }
+        document.getElementById(pageName).style.display = "block";
+        elmnt.style.backgroundColor = color;
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("{{ TAB_NO }}").click();
+</script>
+
+{% endblock %}

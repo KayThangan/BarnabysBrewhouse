@@ -1,0 +1,25 @@
+<table>
+    <thead>
+        <th>Select a beer</th>
+        <th>Quantity of beers</th>
+    </thead>
+    <form action = "/addBrewProcess" method = "POST">
+        <tr  id="brewProcessForm">
+            <td>
+                <select name="beer_name" style="color: #1e2130;" required>
+                    {% for beer in BEERS %}
+                    <option value="{{ beer }}">{{ beer }}</option>
+                    {% endfor %}
+                </select>
+            </td>
+            <td>
+                <input type="number" name="quantity" style="color: #1e2130;" min="1" max="2000" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Submit" style="color: #1e2130;">
+            </td>
+        </tr>
+    </form>
+</table>

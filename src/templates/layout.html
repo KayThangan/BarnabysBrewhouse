@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Barnaby’s Brewhouse</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ url_for ('static', filename='css/styles.css') }}">
+        <style type="text/css">
+
+        </style>
+    </head>
+    <body>
+    <div class="body">
+        <div class="head">
+            <h1><b>Manufacturing Dashboard</b></h1>
+            <h4>Sales predictions and Process Monitoring</h4>
+        </div>
+
+        {% block body %}{% endblock %}
+    </div>
+    <script type="text/javascript">
+
+    </script>
+    </body>
+</html>

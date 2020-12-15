@@ -1,0 +1,27 @@
+<table>
+    <thead>
+    <th>Gyle No</th>
+    <th>Beer</th>
+    <th>Quantity</th>
+    </thead>
+    {% for element in PROCESS_MANAGEMENT %}
+    <tr id="processManagementForm">
+        <td>{{ PROCESS_MANAGEMENT[element]['gyle_no'] }}</td>
+        <td>{{ PROCESS_MANAGEMENT[element]['beer_name'] }}</td>
+        <td>{{ PROCESS_MANAGEMENT[element]['quantity'] }}</td>
+        <td>{{ PROCESS_MANAGEMENT[element]['process_tank'] }}</td>
+        <td>is_allocate: {{ PROCESS_MANAGEMENT[element]['is_allocate'] }}</td>
+        <td>
+            {% if not PROCESS_MANAGEMENT[element]['process_tank']['finish'] %}
+            <form action="/continueProcess/{{ element }}" method="POST">
+                <input type="submit" value="Start next Process" style="color: #1e2130;">
+            </form>
+            {% else %}
+            <form action="/completeProcess/{{ element }}" method="POST">
+                <input type="submit" value="Complete Confirmation" style="color: #1e2130;">
+            </form>
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+</table>

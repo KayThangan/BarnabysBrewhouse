@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<table>
+    <thead>
+        <th>Tanks</th>
+        <th></th>
+    </thead>
+    {% for tank in TANKS %}
+    <tr>
+        <td>{{ tank }}</td>
+        <td>
+            <div class="w3-light-grey w3-round-xlarge" style="clear: both">
+                <div class="w3-container w3-blue w3-round-xlarge" style="width:{{ (TANKS[tank].used_capacity / TANKS[tank].volume) * 100 }}%">{{ (TANKS[tank].used_capacity / TANKS[tank].volume) * 100 }}%</div>
+            </div>
+        </td>
+    </tr>
+    {% endfor %}
+</table>

@@ -1,0 +1,97 @@
+body {
+    background-color: #1e2130;
+}
+
+h1 {
+    Color: #f3f5f4;
+    font-family: Comic Sans MS;
+    font-size: 300%;
+}
+
+h2 {
+    Color: #f3f5f4;
+    float: left;
+    font-family: courier;
+    text-align: left;
+}
+
+h3 {
+    Color: #f3f5f4;
+    float: left;
+    font-family: courier;
+    text-align: left;
+}
+
+h4 {
+    Color: #f3f5f4;
+    float: left;
+    font-family: courier;
+    text-align: left;
+}
+
+div.head {
+    position: relative;
+    width: calc(100% - 0px);
+    height: 100px;
+    /*border: 3px solid red;*/
+}
+
+div.body {
+    position: relative;
+    width: calc(100% - 0px);
+    /*border: 3px solid red;*/
+}
+
+div.chartContainer{
+    height: 300px;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding: 5px;
+    text-align: left;
+}
+
+table.eventTable tr:nth-child(even) {
+    background-color: #eee;
+}
+
+table.eventTable tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+table.eventTable th {
+    background-color: white;
+    color: #1e2130;
+}
+
+/* Style tab links */
+.tablink {
+    background-color: black;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 33.33%;
+}
+
+.tablink:hover {
+    background-color: #555;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+}
+
+

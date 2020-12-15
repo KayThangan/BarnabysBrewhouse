@@ -1,0 +1,12 @@
+<table>
+    <thead>
+        <th>Beer</th>
+        <th>Quantity</th>
+    </thead>
+    {% for beer in BEER_STOCK %}
+    <tr>
+        <td>{{ beer }}</td>
+        <td>{{ BEER_STOCK[beer] }}</td>
+    </tr>
+    {% endfor %}
+</table>
