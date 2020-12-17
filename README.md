@@ -69,14 +69,12 @@ Open a web browser and paste the local-host http link. E.g. http://127.0.0.1:500
 * Python
 
 ## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
+* [Kay Thangan](https://github.com/KayThangan)
 
 ## Authors
-
-* **Kokulan Thangasuthan**
+* [Kay Thangan](https://github.com/KayThangan)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
